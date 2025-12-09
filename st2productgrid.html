@@ -1,0 +1,99 @@
+create a responsive grid layout structure using html css
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Grid</title>
+
+    <style>
+        /* Basic page styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f7f7f7;
+        }
+
+        /* Title */
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Mobile-first grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;  /* 1 column on mobile */
+            gap: 15px;
+        }
+
+        /* Product cards */
+        .product-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product-card h2 {
+            margin: 0 0 10px;
+        }
+
+        .product-card button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            border: none;
+            background: #0077ff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Tablet view */
+        @media (min-width: 600px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            }
+        }
+
+        /* Desktop view */
+        @media (min-width: 900px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="title">Our Products</h1>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <h2>Iphone</h2>
+            <p>A fast, lightweight phone with a sharp display, powerful A14 chip, and a dual-camera system for great photos and videos.</p>
+            <button>View Details</button>
+        </div>
+
+        <div class="product-card">
+            <h2>Redmi</h2>
+            <p>A budget-friendly phone offering strong performance, a clear display, and a versatile camera system. Great value for everyday use, entertainment, and multitasking.</p>
+            <button>View Details</button>
+        </div>
+
+        <div class="product-card">
+            <h2>Samsung</h2>
+            <p>A sleek and powerful phone with a vibrant display, fast performance, and a high-quality camera designed to capture clear, detailed photos and videos. Perfect for everyday use and multitasking.</p>
+            <button>View Details</button>
+        </div>
+
+        <div class="product-card">
+            <h2>nokia</h2>
+            <p>A reliable phone with long-lasting battery life, a clean Android experience, and a durable build made for everyday use. Easy to use and perfect for basic tasks and communication.</p>
+            <button>View Details</button>
+        </div>
+    </div>
+
+</body>
+</html>
